@@ -1,0 +1,27 @@
+{
+  "name": "food-truck-scheduler",
+  "version": "1.0.0",
+  "description": "food truck scheduler",
+  "main": "FoodTruckFinder.js",
+  "scripts": {
+    "build": "tsc FoodTruckFinder.ts",
+    "start": "node FoodTruckFinder.js",
+    "dev": "npm run build && NODE_ENV=development npm start",
+    "show-open-food-trucks": "npm run build && npm start"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/capitalize": "^2.0.0",
+    "@types/lodash": "^4.14.161",
+    "@types/node": "^14.6.2",
+    "@types/readline-sync": "^1.4.3",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "capitalize": "^2.0.3",
+    "console-table-printer": "^2.3.21",
+    "dotenv": "^8.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}
