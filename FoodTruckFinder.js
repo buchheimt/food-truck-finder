@@ -72,7 +72,7 @@ var FoodTruckFinder = /** @class */ (function () {
                                 url: process.env.SOCRATA_BASE_URL,
                                 method: "GET",
                                 params: {
-                                    $$app_token: process.env.SOCRATA_API_KEY,
+                                    $$app_token: process.env.SOCRATA_API_TOKEN,
                                     $limit: PAGE_SIZE,
                                     $offset: PAGE_SIZE * pageNumber,
                                     $order: "applicant",
@@ -140,7 +140,7 @@ var FoodTruckFinder = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        if (!process.env.SOCRATA_BASE_URL || !process.env.SOCRATA_API_KEY) {
+                        if (!process.env.SOCRATA_BASE_URL || !process.env.SOCRATA_API_TOKEN) {
                             console.log("Invalid .env, make sure this file is configured per readme");
                             process.exit();
                         }

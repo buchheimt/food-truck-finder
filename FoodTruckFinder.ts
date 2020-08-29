@@ -76,7 +76,7 @@ class FoodTruckFinder {
         url: process.env.SOCRATA_BASE_URL,
         method: "GET",
         params: {
-          $$app_token: process.env.SOCRATA_API_KEY,
+          $$app_token: process.env.SOCRATA_API_TOKEN,
           $limit: PAGE_SIZE,
           $offset: PAGE_SIZE * pageNumber,
           $order: "applicant",
@@ -132,7 +132,7 @@ class FoodTruckFinder {
   }
 
   async searchOpenFoodTrucks() {
-    if (!process.env.SOCRATA_BASE_URL || !process.env.SOCRATA_API_KEY) {
+    if (!process.env.SOCRATA_BASE_URL || !process.env.SOCRATA_API_TOKEN) {
       console.log("Invalid .env, make sure this file is configured per readme");
       process.exit();
     }
